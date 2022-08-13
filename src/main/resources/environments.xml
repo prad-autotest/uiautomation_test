@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<setup>
+<!--    <environment environmentName="qa" url="http://automationpractice.com/index.php?controller=authentication&amp;back=my-account">-->
+    <environment environmentName="qa" url="https://www.google.com/">
+    <user role="user1" fullName="Terry" userName="user1" password="pass1234"/>
+        <user role="user1" fullName="Terry" userName="user1" password="pass1234"/>
+        <user role="user1" fullName="Terry" userName="user1" password="pass1234"/>
+        <user role="user1" fullName="Terry" userName="user1" password="pass1234"/>
+        <user role="user1" fullName="Terry" userName="user1" password="pass1234"/>
+        <user role="user1" fullName="Terry" userName="user1" password="pass1234"/>
+        <user role="user1" fullName="Terry" userName="user1" password="pass1234"/>
+        <user role="user1" fullName="Terry" userName="user1" password="pass1234"/>
+        <user role="user1" fullName="Terry" userName="user1" password="pass1234"/>
+    </environment>
+</setup>

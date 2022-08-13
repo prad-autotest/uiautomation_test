@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<registration>
+    <aliases>
+        <test-name>Create New Client Account</test-name>
+        <test-features>Client Account</test-features>
+        <test-stories>Client successfully creates his new account </test-stories>
+        <url>${env.getUrl()}</url>
+        <first-name>$[HUMAN_NAMES('{A}', 'null')]</first-name>
+        <last-name>$[HUMAN_NAMES('{S}', 'null')]</last-name>
+        <email-host>$[CUSTOM_LIST('null','@google.com,@yahoo.com,@outlook.com,@mail.com,@zoho.com')]</email-host>
+        <title>$[CUSTOM_LIST('null','Mr.,Mrs.')]</title>
+        <password>$[WORD('[A:4][B:4]','null')]</password>
+        <day>$[NUMBER('##','1,31')]</day>
+        <month>$[CUSTOM_LIST('null','January,February,March,April,May,June,July,August,September,October,November,December')]</month>
+        <year>$[NUMBER('####','1960,2000')]</year>
+        <address>${AddressGen.generateAddress()}</address>
+        <address-street>${address.toString("{#} {S}")}</address-street>
+        <city>${address.toString("{T}")}</city>
+        <postal-code>${address.toString("{O}")}</postal-code>
+        <other>$[WORD('|A| {b} {c} {d} {e}','null')]</other>
+        <phone>$[ALPHANUMERIC('([a][b][c])-[d][e][f][g][h][i][g]','null')]</phone>
+        <alias>$[WORD('{a}_{b}','null')]</alias>
+    </aliases>
+    <url>${url}</url>
+    <authenticationPO>
+        <email__create>${first-name}.${last-name}${email-host}</email__create>
+    </authenticationPO>
+    <createAccountPO>
+        <title>${title}</title>
+        <customer__firstname>${first-name}</customer__firstname>
+        <customer__lastname>${last-name}</customer__lastname>
+        <email>${first-name}.${last-name}${email-host}</email>
+        <passwd>${password}</passwd>
+        <days>${day}</days>
+        <months>${month}</months>
+        <years>${year}</years>
+        <newsletter>true</newsletter>
+        <optin>true</optin>
+        <firstname>${first-name}</firstname>
+        <lastname>${last-name}</lastname>
+        <company>Apple Inc.</company>
+        <address1>${address-street}</address1>
+        <city>${city}</city>
+        <id__state>California</id__state>
+        <postcode>95014</postcode>
+        <id__country>United States</id__country>
+        <other>${other}</other>
+        <phone>${phone}</phone>
+        <alias>${alias}</alias>
+    </createAccountPO>
+
+</registration>

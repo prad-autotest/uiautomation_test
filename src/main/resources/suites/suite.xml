@@ -1,0 +1,61 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Registration suite" verbose="1" parallel="tests">
+
+    <test name="Verify Google Search GUI page Test 1">
+        <parameter name="data-set" value="data/fit/googleSearch_EN.xml"/>
+        <classes>
+            <class name="functionaltests.GoogleSearchGUITest"/>
+        </classes>
+    </test>
+
+    <test name="Verify Keyword1 in Google Search Test 2">
+        <parameter name="data-set" value="data/fit/googleSearch_EN.xml"/>
+        <classes>
+            <class name="functionaltests.GoogleSearch1Test"/>
+        </classes>
+    </test>
+
+    <test name="Verify Keyword2 Google Search Test 3">
+        <parameter name="data-set" value="data/fit/googleSearch_EN.xml"/>
+        <classes>
+            <class name="functionaltests.GoogleSearch2Test"/>
+        </classes>
+    </test>
+
+    <test name="Verify Gmail link in Google Search Test 4">
+        <parameter name="data-set" value="data/fit/googleSearch_EN.xml"/>
+        <classes>
+            <class name="functionaltests.GoogleSearchGmailLinkTest"/>
+        </classes>
+    </test>
+
+    <!--<test name="Registration Test 2">
+     <test name="Registration Test 1">
+        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+        <classes>
+            <class name="com.candalife.automation.com.tests.TestRegistration"/>
+        </classes>
+    </test>
+
+        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+        <classes>
+            <class name="com.candalife.automation.com.tests.TestRegistration"/>
+        </classes>
+    </test>
+
+    <test name="Registration Test BDD 1">
+        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+        <classes>
+            <class name="com.candalife.automation.com.tests.TestRegistrationBDD"/>
+        </classes>
+    </test>
+
+    <test name="Registration Test BDD 2">
+        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+        <classes>
+            <class name="com.candalife.automation.com.tests.TestRegistrationBDD"/>
+        </classes>
+    </test>
+-->
+</suite>

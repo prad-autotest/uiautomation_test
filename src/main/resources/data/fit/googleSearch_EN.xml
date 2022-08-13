@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<googleSerach>
+<url>${url}</url>
+<googleSearchPO>
+    <searchkey1__txt>India</searchkey1__txt>
+    <searchkey2__txt>Devops</searchkey2__txt>
+</googleSearchPO>
+</googleSerach>
