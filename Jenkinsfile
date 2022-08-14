@@ -3,6 +3,10 @@ timestamps {
   node("HybrisQAVM01") {
     ansiColor('xterm') {
       withEnv(["JAVA_HOME=${tool 'jdk8'}", "PATH+MAVEN=${tool 'maven'}/bin:${env.JAVA_HOME}/bin"]) {
+        
+        stage('Checkout') {
+          checkout scm
+        }
       
         stage('Build') {
           if(isUnix()) {
@@ -12,7 +16,7 @@ timestamps {
             }
           }
           
-          stage('Execute Tests") {
+          stage("Execute Tests") {
             try {
                 if(isUnix()) {
                 sh """
