@@ -1,0 +1,19 @@
+# This is a smaple build configuration for Java (Maven).
+# Check our guides at https://confluence.atlassian.com/x/zd-5Mw for more examples.
+# Only use spaces to incident your .yml configuration.
+# ----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image : maven:3.6.3-jdk-8
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - maven
+        script:
+          - mvn clean package
+        # - pipe: atlasian/bitbucket-upload-file:0.3.2
+        # variables:
+        # BITBUCKET_USERNAME: $BITBUCKET_USERNAME
+        # BITBUCKET_APP_PASSWORD: $BITBUCKET_APP_PASSWORD
+        # FILENAME: "target/iccs-1.0-SNAPSHOT.jar"
